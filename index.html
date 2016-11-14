@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>IdeaSoul-Factory</title>
+
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<header>
+			<img src="resource/ISF-weblogo-572x56.svg">
+			<button class="contact-btn">CONTACT US</button>
+		</header>
+		<div>
+			<p class="text text_big"> <br> WEB <br> MOBILE <br> SOLUTIONS</p>
+			<p class="text text_small"> DEVELOPMENT WORLDWIDE</p>
+		</div>
+		<footer>
+			<img src="resource/footer-hungary-250x20.svg">
+			<button class="contact-btn">CONTACT US</button>
+		</footer>
+	</div>
+	<div class="section" id="section1">
+		<div class="form-style-8">
+		<form id="myform">
+			<a href="mailto:berendi@isf.hu">Mail: berendi@isf.hu</a>
+			<br><br>
+			<input placeholder="Your e-mail" type="text" name="from_email" />
+			<input placeholder="Full name" type="text" name="from_name" />
+			<textarea placeholder="Message" type="message" name="message_html" onresize="app.resize(this)"/></textarea>
+			<br><br>
+			<button>SEND MESSAGE</button>
+		</form>
+		</div>
+	</div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="src/app.js"></script>
+<script>app.init()</script>
+</html>

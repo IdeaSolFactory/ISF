@@ -1,0 +1,16 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "--",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  },
+  "scripts": {
+    "lite-server": "./node_modules/.bin/lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Haraso",
+  "license": "ISC"
+}

@@ -21,9 +21,9 @@ header {
 }
 
 .contact-btn {
-  width: 20vh;
+  width: 25vh;
   height: 6vh;
-  font-size: 2vh;
+  font-size: 2.5vh;
   font-weight: 700;
   font-family: 'Source Sans Pro', sans-serif;
   background-color: transparent;
@@ -32,7 +32,7 @@ header {
   border-radius: 8px;
 }
 
-.contact-btn:active {
+.contact-btn:hover {
   background-color: white;
   color: #00b4ae;
   border: 2px solid transparent;
@@ -64,6 +64,87 @@ footer {
   font-size: 200%;
   font-size: 3.8vw;
 }
+
+.form-style-8{
+    font-family: 'Open Sans Condensed', arial, sans;
+    width: 45vh;
+    padding: 30px;
+    background: #FFFFFF;
+    margin: 50px auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+}
+.form-style-8 h2{
+    background: #4D4D4D;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #797979;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 20px;
+    margin: -30px -30px 30px -30px;
+}
+.form-style-8 input[type="text"],
+.form-style-8 input[type="date"],
+.form-style-8 input[type="datetime"],
+.form-style-8 input[type="email"],
+.form-style-8 input[type="number"],
+.form-style-8 input[type="search"],
+.form-style-8 input[type="time"],
+.form-style-8 input[type="url"],
+.form-style-8 input[type="password"],
+.form-style-8 textarea,
+.form-style-8 select
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 10px;
+    font: 1.5vh Arial, Helvetica, sans-serif;
+    height: 45px;
+}
+.form-style-8 textarea {
+    resize: none;
+    height: 30vh;
+    overflow: hidden;
+}
+
+.form-style-8 button,
+.form-style-8 button{
+    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    box-shadow: inset 0px 1px 0px 0px #e93457;
+    background-color: #e63457;
+    border: 1px solid #f94457;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.5vh;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.form-style-8 a{
+  font-size: 1.5vh;
+}
+
+.form-style-8 button:hover,
+.form-style-8 button:hover {
+    background:linear-gradient(to bottom, #f94457 5%, #f94457 100%);
+    background-color:#f94457;
+}
+
 
 /* Portrait */
 @media screen and (orientation:portrait) {
@@ -135,109 +216,33 @@ footer {
   footer > .contact-btn {
     display: none;
   }
-}
 
-/*
-form {
-  width: 500px;
-  background: white;
-  padding: 20px 25px;
-  margin: auto;
-  margin-top: 30px;
-  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
-}
-form input,
-form textarea {
-  font: inherit;
-  padding: 5px 5px;
-  width: 100%;
-  margin-top: 3px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-}
-form button {
-  border: 1px solid rgba(0,0,0,0.2);
-  padding: 8px 35px;
-  font-size: 12px;
-  background: #888;
-  color: white;
-}
-form label {
-  color: #777;
-  font-size: 11px;
-  margin-bottom: 2px;
-  display: block;
-}*/
+  .form-style-8 { 
+    width: 90vh;
+  }
 
-.form-style-8{
-    font-family: 'Open Sans Condensed', arial, sans;
-    width: 500px;
-    padding: 30px;
-    background: #FFFFFF;
-    margin: 50px auto;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+  .form-style-8 a{ 
+    font-size: 2.5vh;
+  }
 
-}
-.form-style-8 h2{
-    background: #4D4D4D;
-    text-transform: uppercase;
-    font-family: 'Open Sans Condensed', sans-serif;
-    color: #797979;
-    font-size: 18px;
-    font-weight: 100;
-    padding: 20px;
-    margin: -30px -30px 30px -30px;
-}
-.form-style-8 input[type="text"],
-.form-style-8 input[type="message"],
-.form-style-8 input[type="date"],
-.form-style-8 input[type="datetime"],
-.form-style-8 input[type="email"],
-.form-style-8 input[type="number"],
-.form-style-8 input[type="search"],
-.form-style-8 input[type="time"],
-.form-style-8 input[type="url"],
-.form-style-8 input[type="password"],
-.form-style-8 textarea,
-.form-style-8 select
-{
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    outline: none;
-    display: block;
-    width: 100%;
-    padding: 7px;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    background: transparent;
-    margin-bottom: 10px;
-    font: 16px Arial, Helvetica, sans-serif;
-    height: 45px;
-}
-.form-style-8 input[type="message"] {
-    overflow: hidden;
-}
-.form-style-8 button,
-.form-style-8 button{
-    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    box-shadow: inset 0px 1px 0px 0px #e93457;
-    background-color: #e63457;
-    border: 1px solid #f94457;
-    display: inline-block;
-    cursor: pointer;
-    color: #FFFFFF;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 14px;
-    padding: 8px 18px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-.form-style-8 button:hover,
-.form-style-8 button:hover {
-    background:linear-gradient(to bottom, #f94457 5%, #f94457 100%);
-    background-color:#f94457;
+  .form-style-8 button,
+  .form-style-8 button{ 
+    font-size: 2.5vh;
+  }
+
+  .form-style-8 input[type="text"],
+  .form-style-8 input[type="message"],
+  .form-style-8 input[type="date"],
+  .form-style-8 input[type="datetime"],
+  .form-style-8 input[type="email"],
+  .form-style-8 input[type="number"],
+  .form-style-8 input[type="search"],
+  .form-style-8 input[type="time"],
+  .form-style-8 input[type="url"],
+  .form-style-8 input[type="password"],
+  .form-style-8 textarea,
+  .form-style-8 select
+  {
+    font-size: 2.2vh;
+  }
 }

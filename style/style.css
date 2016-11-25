@@ -145,6 +145,9 @@ footer {
     background-color:#f94457;
 }
 
+.form-style-8 a img {
+    width: 30%;
+}
 
 /* Portrait */
 @media screen and (orientation:portrait) {
@@ -244,5 +247,9 @@ footer {
   .form-style-8 select
   {
     font-size: 2.2vh;
+  }
+
+  .form-style-8 textarea {
+      height: 20vh;
   }
 }

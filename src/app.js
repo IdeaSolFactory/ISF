@@ -1,12 +1,13 @@
 var app = {
     myform: $("#myform"),
     contact: $(".contact-btn"),
+    emailRegx: new RegExp('.+@.+\..+'),
 
     init: function() {
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
-                css3: true
+                css3: true,
+                afterResize: function(){window.scrollTo(0,0);}
             });
         });
 
@@ -17,33 +18,63 @@ var app = {
     },
 
     sendMail: function (event) {
+        event.preventDefault();        
+
         var self = this;
-        event.preventDefault();
+        var isValidMail = 0;
+        var validMail = 3;
+        var service_id = "default_service_";
+        var template_id = "contact";
 
         var params = this.myform.serializeArray().reduce(function(obj, item) {
+            isValidMail += self.validateMailProp(item.name, item.value);
             obj[item.name] = item.value;
             return obj;
         }, {});
 
-        // Change to your service ID, or keep using the default service
-        var service_id = "default_service";
-        var template_id = "contact";
+        if(isValidMail===validMail) {
+            this.myform.find("button").text("Sending...");
 
-        this.myform.find("button").text("Sending...");
-
-        emailjs.send(service_id,template_id,params)
-        .then(
-            function(){
-                self.myform.find("button").text("Send");
-            },
-            function(err) {
-                self.myform.find("button").text("Error try later ...");
-            }
-        );
+            emailjs.send(service_id,template_id,params)
+            .then(
+                function(){
+                    self.changeButtonText("Sent", true);
+                },
+                function(err) {
+                    self.changeButtonText("Error try later ...", true);
+                }
+            );
+        } else {
+            this.changeButtonText("Not valid please correct ...", true);
+            
+        }
+        
         return false;
     },
 
     onContact: function () {
         $.fn.fullpage.moveSectionDown();
+    },
+
+    validateMailProp: function (name, value) {
+        var isValid = 0;
+        switch(name) {
+            case "from_email":
+                isValid = this.emailRegx.test(value)|0;
+            break;
+            case "from_name": 
+                isValid = (value.length > 3)|0;
+            break;
+            case "message_html":
+                isValid = (value.length > 3)|0;
+            break;
+        }
+        return isValid;
+    },
+
+    changeButtonText: function(text, setDefaultLater) {
+        this.myform.find("button").text(text);
+        if(setDefaultLater)
+            setTimeout(this.changeButtonText.bind(this, "SEND MESSAGE"), 3000);
     }
 }

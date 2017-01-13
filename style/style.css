@@ -7,7 +7,7 @@
   left: 0px;
 }
 
-#section0,#section1 {
+.section {
   background-color: #00b4ae !important;
   background-image: url("../resource/isf-BG-1920x1080.png") !important;
   background-size: cover;
@@ -149,6 +149,12 @@ footer {
     width: 30%;
 }
 
+.gmap {
+  pointer-events: none;
+  width: 100vw;
+  height: 50vh;
+}
+
 /* Portrait */
 @media screen and (orientation:portrait) {
   header {
@@ -220,16 +226,16 @@ footer {
     display: none;
   }
 
-  .form-style-8 { 
+  .form-style-8 {
     width: 90vh;
   }
 
-  .form-style-8 a{ 
+  .form-style-8 a{
     font-size: 2.5vh;
   }
 
   .form-style-8 button,
-  .form-style-8 button{ 
+  .form-style-8 button{
     font-size: 2.5vh;
   }
 

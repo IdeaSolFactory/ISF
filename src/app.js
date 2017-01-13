@@ -1,6 +1,8 @@
 var app = {
     myform: $("#myform"),
     contact: $(".contact-btn"),
+    next: $(".next-btn"),
+    prev: $(".prev-btn"),
     emailRegx: new RegExp('.+@.+\..+'),
 
     init: function() {
@@ -14,7 +16,19 @@ var app = {
         emailjs.init("user_jRfXICwtPI5cpqnRTrj5A");
         this.myform.submit(this.sendMail.bind(this));
 
+        this.next.click(this.nextPage.bind(this));
+        this.prev.click(this.prevPage.bind(this));
+
         this.contact.click(this.onContact.bind(this));
+
+    },
+
+    nextPage: function() {
+      $.fn.fullpage.moveSectionDown();
+    },
+
+    prevPage: function() {
+      $.fn.fullpage.moveSectionUp();
     },
 
     sendMail: function (event) {
@@ -53,7 +67,7 @@ var app = {
     },
 
     onContact: function () {
-        $.fn.fullpage.moveSectionDown();
+        $.fn.fullpage.moveTo(4);
     },
 
     validateMailProp: function (name, value) {

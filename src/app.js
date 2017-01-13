@@ -18,7 +18,7 @@ var app = {
     },
 
     sendMail: function (event) {
-        event.preventDefault();        
+        event.preventDefault();
 
         var self = this;
         var isValidMail = 0;
@@ -46,9 +46,9 @@ var app = {
             );
         } else {
             this.changeButtonText("Not valid please correct ...", true);
-            
+
         }
-        
+
         return false;
     },
 
@@ -62,7 +62,7 @@ var app = {
             case "from_email":
                 isValid = this.emailRegx.test(value)|0;
             break;
-            case "from_name": 
+            case "from_name":
                 isValid = (value.length > 3)|0;
             break;
             case "message_html":

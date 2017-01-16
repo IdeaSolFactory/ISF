@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700');
 
-* {
+*, *:not(.map) * {
   margin: 0px;
   padding: 0px;
   top: 0px;
@@ -14,13 +14,20 @@
   background-repeat: no-repeat;
 }
 
+.map, .map * {
+  top: auto;
+  bottom: auto;
+  margin: auto;
+  padding: auto;
+}
+
 header {
   position: absolute;
   width: 100%;
   left: -1%;
 }
 
-.contact-btn {
+.btn {
   width: 25vh;
   height: 6vh;
   font-size: 2.5vh;
@@ -32,7 +39,7 @@ header {
   border-radius: 8px;
 }
 
-.contact-btn:hover {
+.btn:hover {
   background-color: white;
   color: #00b4ae;
   border: 2px solid transparent;
@@ -41,8 +48,8 @@ header {
 footer {
   position: absolute;
   width: 100%;
-  top: 88%;
-  left: 1%;
+  top: 88% !important;
+  left: 1% !important;
 }
 
 .text {
@@ -50,6 +57,25 @@ footer {
   font-family: 'Source Sans Pro', sans-serif;
   top: 10%;
   margin-left: 11.5%;
+}
+
+.googleForm {
+  margin: auto;
+  width: 65vw;
+  height: 70vh;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+.googleForm iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.map {
+  height: 50vh;
+  width: 100vw;
 }
 
 .text_big {
@@ -65,7 +91,7 @@ footer {
   font-size: 3.8vw;
 }
 
-.form-style-8{
+.form-style-8 {
     font-family: 'Open Sans Condensed', arial, sans;
     width: 45vh;
     padding: 30px;
@@ -74,9 +100,9 @@ footer {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
-
 }
-.form-style-8 h2{
+
+.form-style-8 h2 {
     background: #4D4D4D;
     text-transform: uppercase;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -86,6 +112,7 @@ footer {
     padding: 20px;
     margin: -30px -30px 30px -30px;
 }
+
 .form-style-8 input[type="text"],
 .form-style-8 input[type="date"],
 .form-style-8 input[type="datetime"],
@@ -96,8 +123,7 @@ footer {
 .form-style-8 input[type="url"],
 .form-style-8 input[type="password"],
 .form-style-8 textarea,
-.form-style-8 select
-{
+.form-style-8 select {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -112,6 +138,7 @@ footer {
     font: 1.5vh Arial, Helvetica, sans-serif;
     height: 45px;
 }
+
 .form-style-8 textarea {
     resize: none;
     height: 30vh;
@@ -119,7 +146,7 @@ footer {
 }
 
 .form-style-8 button,
-.form-style-8 button{
+.form-style-8 button {
     -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
     -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
     box-shadow: inset 0px 1px 0px 0px #e93457;
@@ -135,7 +162,7 @@ footer {
     text-transform: uppercase;
 }
 
-.form-style-8 a{
+.form-style-8 a {
   font-size: 1.5vh;
 }
 
@@ -149,16 +176,10 @@ footer {
     width: 30%;
 }
 
-.gmap {
-  pointer-events: none;
-  width: 100vw;
-  height: 50vh;
-}
-
 /* Portrait */
 @media screen and (orientation:portrait) {
   header {
-    left: -12%;
+    left: -12% !important;
   }
 
   header > .contact-btn {
@@ -166,13 +187,13 @@ footer {
   }
 
   header > img {
-    margin-top: 10%;
+    margin-top: 10% !important;
     width: 85%;
   }
 
   footer {
-    top: 80%;
-    left: 5%;
+    top: 80% !important;
+    left: 5% !important;
   }
 
   footer > img {
@@ -184,7 +205,7 @@ footer {
     width: 90%;
     height: 8vh;
     font-size: 3vh;
-    margin-top: 10%;
+    margin-top: 10% !important;
     border: 4px solid white;
     border-radius: 15px;
   }
@@ -205,15 +226,14 @@ footer {
 
 /* Landscape */
 @media screen and (orientation:landscape) {
-
    header > .contact-btn {
      float: right;
-     margin-top: 6%;
-     margin-right: 10%;
+     margin-top: 6% !important;
+     margin-right: 10% !important;
    }
 
    header > img {
-    margin-top: 5%;
+    margin-top: 5% !important;
     width: 40%;
   }
 
@@ -250,8 +270,7 @@ footer {
   .form-style-8 input[type="url"],
   .form-style-8 input[type="password"],
   .form-style-8 textarea,
-  .form-style-8 select
-  {
+  .form-style-8 select {
     font-size: 2.2vh;
   }
 

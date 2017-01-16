@@ -4,6 +4,8 @@ var app = {
     next: $(".next-btn"),
     prev: $(".prev-btn"),
     emailRegx: new RegExp('.+@.+\..+'),
+    map: "",
+    marker: "",
 
     init: function() {
         $(document).ready(function() {
@@ -19,8 +21,21 @@ var app = {
         this.next.click(this.nextPage.bind(this));
         this.prev.click(this.prevPage.bind(this));
 
-        this.contact.click(this.onContact.bind(this));
+        this.contact.click(this.onContact.bind(this));        
+    },
 
+    initMap() {
+        var self = this;
+        
+        self.map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 47.5361321, lng: 19.0408205},
+          zoom: 17
+        });
+        
+        self.marker = new google.maps.Marker({
+            position: {lat: 47.5361321, lng: 19.0408205},
+            map: self.map
+        })
     },
 
     nextPage: function() {
@@ -29,6 +44,10 @@ var app = {
 
     prevPage: function() {
       $.fn.fullpage.moveSectionUp();
+    },
+
+    onContact: function () {
+        $.fn.fullpage.moveTo(5);
     },
 
     sendMail: function (event) {
@@ -66,10 +85,6 @@ var app = {
         return false;
     },
 
-    onContact: function () {
-        $.fn.fullpage.moveTo(4);
-    },
-
     validateMailProp: function (name, value) {
         var isValid = 0;
         switch(name) {
@@ -91,4 +106,8 @@ var app = {
         if(setDefaultLater)
             setTimeout(this.changeButtonText.bind(this, "SEND MESSAGE"), 3000);
     }
+}
+
+function initMap() {
+    app.initMap();
 }

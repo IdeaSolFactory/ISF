@@ -5,11 +5,13 @@
   "main": "index.html",
   "dependencies": {},
   "devDependencies": {
-    "lite-server": "^2.2.2"
+    "lite-server": "^2.2.2",
+    "serve": "^2.4.1"
   },
   "scripts": {
     "lite-server": "./node_modules/.bin/lite-server",
-    "test": "npm run lite-server"
+    "test": "npm run lite-server",
+    "ie-test": "./node_modules/.bin/serve"
   },
   "author": "Haraso",
   "license": "ISC"

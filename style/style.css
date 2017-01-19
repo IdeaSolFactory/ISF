@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700');
+@font-face {
+	font-family: 'Segoe UI';
+	src: url('../resource/SegoeUI.eot');
+	src: url('../resource/SegoeUI.eot?#iefix') format('embedded-opentype'),
+		url('../resource/SegoeUI.woff2') format('woff2'),
+		url('../resource/SegoeUI.woff') format('woff'),
+		url('../resource/SegoeUI.ttf') format('truetype'),
+		url('../resource/SegoeUI.svg#SegoeUI') format('svg');
+}
 
 *, *:not(.map) * {
   margin: 0px;
@@ -52,25 +61,156 @@ footer {
   left: 1% !important;
 }
 
-.text {
-  color: white;
-  font-family: 'Source Sans Pro', sans-serif;
-  top: 10%;
-  margin-left: 11.5%;
+.greenFont {
+  color: #019792 !important;
 }
 
-.googleForm {
+.greenBg {
+  background: #019792 !important;
+}
+
+.greyFont {
+  color: #525252 !important;
+}
+
+.blackFont {
+  color: #000 !important;
+}
+
+.whiteFont {
+  color: #FFF !important;
+}
+
+.bold {
+  font-weight: 700 !important;
+}
+
+.semiBold {
+  font-weight: 600 !important;
+}
+
+.roundedBox {
+  font-family: "Segoe UI";
+}
+
+div.roundedBox {
   margin: auto;
   width: 65vw;
-  height: 70vh;
+  background: #FFF;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
   -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
   -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+  border-radius: 1vw;
+  position: relative;
 }
 
-.googleForm iframe {
+div.roundedBox .title {
+  position: absolute;
+  top: -6vw;
   width: 100%;
-  height: 100%;
+}
+
+div.roundedBox .header {
+  font-size: 2.05vw;
+  padding: 1.5vh 2vw;
+}
+
+div.roundedBox .body {
+  font-size: 1.4vw;
+  padding: 1.5vh 2vw;
+  font-weight: 300;
+}
+
+div.roundedBox .enum {
+  padding: 1.6vh 2vw !important;
+}
+
+div.roundedBox .enum span {
+  padding: 1vh 1.5vw 1.2vh 1vw;
+  border-radius: 100vw;
+}
+
+div.roundedBox .enum img {
+  width: 1.4vw;
+  height: 1.4vw;
+  vertical-align: middle;
+  padding-right: 1vw;
+}
+
+div.roundedBox .footer {
+  display: flex;
+  display: -webkit-flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-box-direction: row;
+  font-weight: 300;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+}
+
+div.roundedBox .footer > div {
+  flex: 1;
+  -webkit-flex: 1;
+  -webkit-box-flex: 1;
+  width: 25%;
+  display: flex;
+  display: -webkit-flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -webkit-box-direction: column;
+}
+
+div.roundedBox .footer .logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+div.roundedBox .footer .logo img {
+  width: 50%;
+  height: 50%;
+}
+
+div.roundedBox .footer .datetimelocation {
+  font-size: 1.2vw;
+  padding: 1.2vh 0;
+}
+
+div.roundedBox .footer .datetimelocation img {
+  height: 1.2vw;
+  vertical-align: baseline;
+  padding-right: 1vw;
+}
+
+div.roundedBox .footer .datetimelocation .deeper {
+  padding-left: 2vw;
+}
+
+div.roundedBox .footer .apply {
+  display: flex;
+  display: -webkit-flex;
+  flex-shrink: 0;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+div.roundedBox .footer .apply a {
+  font-size: 1.2vw;
+  padding: 2vh 2vw;
+  border-radius: 1vh;
+  background: #FFF;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+  display: block;
+}
+
+div.roundedBox .footer .apply a:hover {
+  transform: scale(1.05);
 }
 
 .map {
@@ -78,17 +218,30 @@ footer {
   width: 100vw;
 }
 
-.text_big {
-  font-weight: 700;
+.text {
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  top: 10%;
+  margin-left: 11.5%;
+}
+
+.text-big {
   font-size: 400%;
   font-size: 9vw;
   line-height: 90%;
 }
 
-.text_small {
-  font-weight: 300;
+.text-medium {
+  font-size: 4.5vw;
+}
+
+.text-small {
   font-size: 200%;
   font-size: 3.8vw;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .form-style-8 {
@@ -191,6 +344,11 @@ footer {
     width: 85%;
   }
 
+  header.roundedBox {
+    left: auto !important;
+    top: 10% !important;
+  }
+
   footer {
     top: 80% !important;
     left: 5% !important;
@@ -210,17 +368,53 @@ footer {
     border-radius: 15px;
   }
 
-  .text_big {
-    font-weight: 700;
+  .text-big {
     font-size: 400%;
     font-size: 14.5vw;
     line-height: 90%;
   }
 
-  .text_small {
-    font-weight: 300;
+  .text-medium {
+    font-size: 9vw;
+  }
+
+  .text-small {
     font-size: 200%;
     font-size: 6.2vw;
+  }
+
+  div.roundedBox {
+    width: 80vw;
+  }
+
+  div.roundedBox .title {
+    font-size: 5.5vw;
+    top: -8vw;
+  }
+
+  div.roundedBox .header {
+    font-size: 4vw;
+  }
+
+  div.roundedBox .body {
+    font-size: 2.5vw;
+  }
+
+  div.roundedBox .enum img {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+
+  div.roundedBox .footer .logo {
+    width: 15% !important;
+  }
+
+  div.roundedBox .footer .datetimelocation {
+    font-size: 1.8vw;
+  }
+
+  div.roundedBox .footer .datetimelocation img {
+    font-size: 1.8vw;
   }
 }
 
@@ -276,5 +470,41 @@ footer {
 
   .form-style-8 textarea {
       height: 20vh;
+  }
+}
+
+@media only screen and (orientation: Landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  div.roundedBox {
+    width: 80vw;
+    top: -7vh;
+  }
+
+  div.roundedBox .title {
+    font-size: 3vw;
+  }
+
+  div.roundedBox .header {
+    font-size: 2vw;
+  }
+
+  div.roundedBox .body {
+    font-size: 1.5vw;
+  }
+
+  div.roundedBox .enum img {
+    width: 1vw;
+    height: 1vw;
+  }
+
+  div.roundedBox .footer .logo {
+    width: 15% !important;
+  }
+
+  div.roundedBox .footer .datetimelocation {
+    font-size: 1vw;
+  }
+
+  div.roundedBox .footer .datetimelocation img {
+    font-size: 1vw;
   }
 }

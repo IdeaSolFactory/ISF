@@ -21,10 +21,10 @@ var app = {
         this.next.click(this.nextPage.bind(this));
         this.prev.click(this.prevPage.bind(this));
 
-        this.contact.click(this.onContact.bind(this));        
+        this.contact.click(this.onContact.bind(this));
     },
 
-    initMap() {
+    initMap: function() {
         var self = this;
         
         self.map = new google.maps.Map(document.getElementById('map'), {
@@ -47,7 +47,7 @@ var app = {
     },
 
     onContact: function () {
-        $.fn.fullpage.moveTo(5);
+        $.fn.fullpage.moveTo(4);
     },
 
     sendMail: function (event) {
@@ -66,19 +66,19 @@ var app = {
         }, {});
 
         if(isValidMail===validMail) {
-            this.myform.find("button").text("Sending...");
+            this.myform.find("button").text("Küldés...");
 
             emailjs.send(service_id,template_id,params)
             .then(
                 function(){
-                    self.changeButtonText("Sent", true);
+                    self.changeButtonText("Elküldve", true);
                 },
                 function(err) {
-                    self.changeButtonText("Error try later ...", true);
+                    self.changeButtonText("Hiba történt.", true);
                 }
             );
         } else {
-            this.changeButtonText("Not valid please correct ...", true);
+            this.changeButtonText("Hibás adat.", true);
 
         }
 
@@ -104,7 +104,7 @@ var app = {
     changeButtonText: function(text, setDefaultLater) {
         this.myform.find("button").text(text);
         if(setDefaultLater)
-            setTimeout(this.changeButtonText.bind(this, "SEND MESSAGE"), 3000);
+            setTimeout(this.changeButtonText.bind(this, "KÜLDÉS"), 3000);
     }
 }
 

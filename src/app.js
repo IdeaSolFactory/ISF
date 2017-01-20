@@ -1,8 +1,8 @@
 var app = {
     myform: $("#myform"),
     contact: $(".contact-btn"),
-    next: $(".next-btn"),
-    prev: $(".prev-btn"),
+    aboutUsBtn: $(".aboutUs-btn"),
+    testBtn: $(".test-btn"),
     emailRegx: new RegExp('.+@.+\..+'),
     map: "",
     marker: "",
@@ -18,8 +18,8 @@ var app = {
         emailjs.init("user_jRfXICwtPI5cpqnRTrj5A");
         this.myform.submit(this.sendMail.bind(this));
 
-        this.next.click(this.nextPage.bind(this));
-        this.prev.click(this.prevPage.bind(this));
+        this.aboutUsBtn.click(this.aboutUs.bind(this));
+        this.testBtn.click(this.test.bind(this));
 
         this.contact.click(this.onContact.bind(this));
     },
@@ -38,12 +38,12 @@ var app = {
         })
     },
 
-    nextPage: function() {
-      $.fn.fullpage.moveSectionDown();
+    aboutUs: function() {
+        $.fn.fullpage.moveTo(2);
     },
 
-    prevPage: function() {
-      $.fn.fullpage.moveSectionUp();
+    test: function() {
+        $.fn.fullpage.moveTo(3);
     },
 
     onContact: function () {

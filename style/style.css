@@ -81,6 +81,10 @@ footer {
   color: #FFF !important;
 }
 
+.redFont {
+  color: #E63457 !important;
+}
+
 .bold {
   font-weight: 700 !important;
 }
@@ -89,7 +93,7 @@ footer {
   font-weight: 600 !important;
 }
 
-.roundedBox {
+.segoe {
   font-family: "Segoe UI";
 }
 
@@ -104,9 +108,14 @@ div.roundedBox {
   position: relative;
 }
 
+ div.roundedBox.notSoWide {
+    /*box-shadow: none !important;
+    -webkit-box-shadow: none !important;*/
+  }
+
 div.roundedBox .title {
   position: absolute;
-  top: -6vw;
+  top: -6.5vw;
   width: 100%;
 }
 
@@ -213,6 +222,22 @@ div.roundedBox .footer .apply a:hover {
   transform: scale(1.05);
 }
 
+div.roundedBox .aboutUs {
+  background: url('../resource/rolunk-bg.png'); background-size: cover; background-position: left; background-repeat: no-repeat;
+}
+
+div.roundedBox .aboutUs .rightSide {
+  padding: 10vh 3vw 10vh 0;
+}
+
+footer.info {
+   top: 90vh !important;
+}
+
+.about .body {
+  font-size: 1.4vw;
+}
+
 .map {
   height: 50vh;
   width: 100vw;
@@ -253,6 +278,7 @@ div.roundedBox .footer .apply a:hover {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+    border-radius: 1vw;
 }
 
 .form-style-8 h2 {
@@ -313,6 +339,7 @@ div.roundedBox .footer .apply a:hover {
     padding: 8px 18px;
     text-decoration: none;
     text-transform: uppercase;
+    border-radius: 1vw;
 }
 
 .form-style-8 a {
@@ -335,7 +362,7 @@ div.roundedBox .footer .apply a:hover {
     left: -12% !important;
   }
 
-  header > .contact-btn {
+  header .btn.contact-btn, header .btn.aboutUs-btn, header .btn.test-btn {
     display: none;
   }
 
@@ -349,21 +376,30 @@ div.roundedBox .footer .apply a:hover {
     top: 10% !important;
   }
 
+  .main {
+    margin-bottom: 25vh;
+  }
+
   footer {
-    top: 80% !important;
+    top: 65% !important;
     left: 5% !important;
   }
 
   footer > img {
     width: 55%;
     float: right;
+    margin-bottom: 10vh;
   }
 
-  footer > .contact-btn {
+  footer .btn.aboutUs-btn {
+    margin-top: 10px;
+  }
+
+  footer .btn.contact-btn, footer .btn.aboutUs-btn, footer .btn.test-btn {
     width: 90%;
     height: 8vh;
     font-size: 3vh;
-    margin-top: 10% !important;
+    margin-bottom: 10px;
     border: 4px solid white;
     border-radius: 15px;
   }
@@ -390,6 +426,15 @@ div.roundedBox .footer .apply a:hover {
   div.roundedBox .title {
     font-size: 5.5vw;
     top: -8vw;
+  }
+
+  .about .title {
+    font-size: 5.5vw;
+    top: -8vw;
+  }
+
+  .about .body {
+    font-size: 3.5vw !important;
   }
 
   div.roundedBox .header {
@@ -420,10 +465,14 @@ div.roundedBox .footer .apply a:hover {
 
 /* Landscape */
 @media screen and (orientation:landscape) {
-   header > .contact-btn {
+   header .btn.contact-btn, header .btn.aboutUs-btn, header .btn.test-btn {
      float: right;
      margin-top: 6% !important;
-     margin-right: 10% !important;
+     margin-right: 1%;
+   }
+
+   header .btn.contact-btn {
+     margin-right: 5%;
    }
 
    header > img {
@@ -436,8 +485,8 @@ div.roundedBox .footer .apply a:hover {
     float: right;
   }
 
-  footer > .contact-btn {
-    display: none;
+  footer .btn.contact-btn, footer .btn.aboutUs-btn, footer .btn.test-btn {
+    display: none !important;
   }
 
   .form-style-8 {
@@ -473,13 +522,36 @@ div.roundedBox .footer .apply a:hover {
   }
 }
 
+@media only screen and (orientation: Portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  div.roundedBox .aboutUs {
+    background: url('../resource/rolunk-bg.png'); background-size: 100% 100%; background-position: left; background-repeat: no-repeat;
+  }
+
+  div.roundedBox .aboutUs .rightSide {
+    padding: 2vh 3vw 2vh 0;
+    font-size: 2.25vw;
+  }
+
+  footer.info {
+    top: 80vh !important;
+  }
+}
+
 @media only screen and (orientation: Landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .about .body {
+    font-size: 2vw !important;
+  }
+
   div.roundedBox {
     width: 80vw;
     top: -7vh;
   }
 
-  div.roundedBox .title {
+  div.roundedBox.notSoWide {
+    width: 70vw;
+  }
+
+  div.roundedBox .title, .about .title {
     font-size: 3vw;
   }
 
@@ -506,5 +578,9 @@ div.roundedBox .footer .apply a:hover {
 
   div.roundedBox .footer .datetimelocation img {
     font-size: 1vw;
+  }
+
+  div.roundedBox .aboutUs {
+    background: url('../resource/rolunk-bg.png'); background-size: contain; background-position: left; background-repeat: no-repeat;
   }
 }

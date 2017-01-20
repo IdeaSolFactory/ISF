@@ -584,3 +584,9 @@ footer.info {
     background: url('../resource/rolunk-bg.png'); background-size: contain; background-position: left; background-repeat: no-repeat;
   }
 }
+
+@media only screen and (orientation: Landscape) and (-webkit-min-device-pixel-ratio: 2) and (height: 560px) {
+  div.roundedBox {
+    top: 1vh;
+  }
+}

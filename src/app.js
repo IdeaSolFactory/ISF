@@ -56,7 +56,7 @@ var app = {
         var self = this;
         var isValidMail = 0;
         var validMail = 3;
-        var service_id = "default_service_";
+        var service_id = "default_service";
         var template_id = "contact";
 
         var params = this.myform.serializeArray().reduce(function(obj, item) {

@@ -2994,6 +2994,15 @@ a.uk-slidenav > * {
   background-color: #f3732a;
 }
 
+#pr__works .works-boxes .work-box.work--highandsol .image > img {
+  width: 220px;
+  height: 220px;
+}
+
+#pr__works .works-boxes .work-box.work--highandsol .image--bckgrnd::after {
+  background-color: #34363a;
+}
+
 /* CLIENT TESTIMONIALS SECTION */
 #pr__clients .description {
   font-size: 19px;

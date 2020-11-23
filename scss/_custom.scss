@@ -309,6 +309,16 @@
                     background-color: #f3732a;
                 }
             }
+
+            &.work--highandsol {
+                .image>img{
+                    width: 220px;
+                    height: 220px;
+                }
+                .image--bckgrnd::after {
+                    background-color: #34363a;
+                }
+            }
         }
     }
 }
